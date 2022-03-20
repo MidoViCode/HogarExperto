@@ -1,13 +1,13 @@
-package com.proyectotuvch.hogar.HogarExperto;
+package com.tuvch.hogarexperto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HogarExpertoApplication {
+public class HogarexpertoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HogarExpertoApplication.class, args);
+		SpringApplication.run(HogarexpertoApplication.class, args);
 	}
 
 }
