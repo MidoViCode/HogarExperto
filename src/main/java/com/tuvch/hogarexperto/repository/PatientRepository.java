@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PatientRepository extends CrudRepository <PatientEntity, Integer> {
+    PatientEntity findByBirthday(String birthday);
+    PatientEntity findByNameAndLastName (String name, String lastName);
+    PatientEntity findByNameAndLastNameaAndMotherLastName(String name, String lastName, String motherLastName);
 }
