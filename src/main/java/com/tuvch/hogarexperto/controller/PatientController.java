@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class PatientController {
     @GetMapping()
     public String findPatient(@RequestParam("patiendtId") int patientId){
+
         return "BUsque el experto" + patientId;
     }
 
@@ -19,6 +20,7 @@ public class PatientController {
 
     @DeleteMapping()
     public String deletePatient(@PathVariable int expertoId){
+
         return "borrar el experto" + expertoId;
     }
 

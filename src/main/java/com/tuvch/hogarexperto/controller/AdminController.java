@@ -4,7 +4,7 @@ import com.tuvch.hogarexperto.dto.request.AdminRequest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/administrativos")
 
 public class AdminController {
     @GetMapping()

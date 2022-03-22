@@ -4,7 +4,7 @@ import com.tuvch.hogarexperto.dto.request.UserRequest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/usuarios")  //Esto cambia
+@RequestMapping("/usuarios")
 public class UserController {
 
     @GetMapping("")

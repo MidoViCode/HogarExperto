@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class RelativeController {
     @GetMapping("")
     public String findRelatives(@RequestParam("relativeId") int relativeId){
+
         return "Familiar:" + relativeId;
     }
 
@@ -19,7 +20,8 @@ public class RelativeController {
 
     @DeleteMapping()
     public String delete(@PathVariable int relativeId){
-        return "Borrar el Familiar " + relativeId;
+
+        return "Borrar el Familiar  " + relativeId;
     }
 
 }

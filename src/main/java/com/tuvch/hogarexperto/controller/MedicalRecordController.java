@@ -11,13 +11,14 @@ public class MedicalRecordController {
         return "Busque el expdiente" + medicalRecordId;
     }
 
-    @PostMapping()
-    public String createMedicalRecord(@RequestBody medicalRecordRequest expedienteBody){
-        return "Insertaré expediente" + expedienteBody.toString();
-    }
+ //   @PostMapping()
+ //   public String createMedicalRecord(@RequestBody medicalRecordRequest expedienteBody){
+ //       return "Insertaré expediente" + expedienteBody.toString();
+ //   }
 
     @DeleteMapping("/{medicalRecordId}")
     public String delete(@PathVariable int medicalRecordId){
+
         return "borrar el expediente " + medicalRecordId;
     }
 
