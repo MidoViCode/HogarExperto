@@ -54,7 +54,7 @@ public class MedicalRecordEntity {
 
     @OneToMany
     @JoinColumn(name = "id_familiar")
-    List<RelativeEntity> relativeEntityList;
+    ArrayList<RelativeEntity> relativeEntityList;
 
 
 }
