@@ -42,8 +42,8 @@ public class MedicalRecordEntity {
     @Column(name = "ant_quirurgicos")
     String surgical;
 
-    @Column(name = "medicinas")
-    String medicines;
+    @Column(name = "id_medicinas")
+    Integer medicineId;
 
     @Column(name = "talla")
     Float size;
