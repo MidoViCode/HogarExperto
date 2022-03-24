@@ -19,13 +19,13 @@ public class RelativeEntity {
     @Column(name = "id_Familiar")
     Integer relativeId;
 
-    @Column(name="Nombre")
+    @Column(name="nombre")
     String name;
 
-    @Column(name="Ap_Paterno")
+    @Column(name="ap_Paterno")
     String lastName;
 
-    @Column(name="Ap_Materno")
+    @Column(name="ap_Materno")
     String motherLastName;
 
     @Column(name = "fecha_Nacimiento")

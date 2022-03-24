@@ -9,8 +9,8 @@ import java.util.Date;
 
 @Repository
 public interface MedicalRecordRepository extends CrudRepository <MedicalRecordEntity, Integer> {
-    PatientEntity findByBirthday(String birthday);
-    PatientEntity findByNameAndLastName (String name, String lastName);
-    PatientEntity findByNameAndLastNameaAndMotherLastName(String name, String lastName, String motherLastName);
+    MedicalRecordEntity findByPatientEntityBirthday(Date birthday);
+    MedicalRecordEntity findFirstByPatientEntityNameAndPatientEntityLastName (String name, String lastName);
+    MedicalRecordEntity findByCurp(String curp);
     MedicalRecordEntity findByAdmissionDate(Date admissionDate);
 }

@@ -14,13 +14,7 @@ public class BinnacleEntity {
 
     @Id
     @Column(name = "id_bitacora")
-    String binnacleId;
-
-    @Column(name = "id_paciente")
-    String patientId;
-
-    @Column(name = "id_usuario")
-    String userId;
+    Integer binnacleId;
 
     @Column(name = "fecha")
     Date date;
@@ -32,4 +26,11 @@ public class BinnacleEntity {
     @JoinColumn(name = "id_tipoBit")
     BinnacleTypeEntity binnacleTypeEntity;
 
+    @OneToOne
+    @JoinColumn(name = "id_paciente")
+    PatientEntity patientId;
+
+    @OneToOne
+    @JoinColumn(name = "id_usuario")
+    UserEntity userId;
 }

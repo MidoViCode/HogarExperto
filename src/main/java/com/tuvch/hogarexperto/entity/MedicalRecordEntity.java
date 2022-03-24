@@ -3,7 +3,7 @@ package com.tuvch.hogarexperto.entity;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.Date;
-import java.util.ArrayList;
+import java.util.List;
 
 
 import javax.persistence.*;
@@ -25,7 +25,7 @@ public class MedicalRecordEntity {
     Float weight;
 
     @Column(name = "CURP")
-    String CURP;
+    String curp;
 
     @Column(name = "ant_cronicas")
     String chronic;
@@ -42,9 +42,6 @@ public class MedicalRecordEntity {
     @Column(name = "ant_quirurgicos")
     String surgical;
 
-    @Column(name = "id_medicinas")
-    Integer medicineId;
-
     @Column(name = "talla")
     Float size;
 
@@ -54,7 +51,10 @@ public class MedicalRecordEntity {
 
     @OneToMany
     @JoinColumn(name = "id_familiar")
-    ArrayList<RelativeEntity> relativeEntityList;
+    List<RelativeEntity> relativeEntityList;
 
+    @OneToMany
+    @JoinColumn(name = "id_medicinas")
+    List<MedicineEntity> medicineId;
 
 }

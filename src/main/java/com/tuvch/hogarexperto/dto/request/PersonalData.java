@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 public class PersonalData {
     @JsonProperty("nombre")
     String name;
@@ -32,4 +33,18 @@ public class PersonalData {
 
     @JsonProperty("correo")
     String email;
+
+
+    public static PersonalData buildMock(){
+        return PersonalData.builder()
+                .name("Arturo ")
+                .lastname("Jimenez")
+                .motherLastName("Vigueras")
+                .birthday("25-09-1992")
+                .adress("Huixqui")
+                .genre("Masculino")
+                .phone("555555555")
+                .email("artur@gmail.com")
+                .build();
+    }
 }
