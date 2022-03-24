@@ -10,13 +10,23 @@ import lombok.*;
 @ToString
 public class UserRequest {
 
-    String username;
-    String password;
+    // String username; -> se declara así si tienen el mismo nombre
 
-    @JsonProperty("user_type")
-    int userType;
+    @JsonProperty("id_usuari")
+    int userId;
 
     @JsonProperty("personal_data")
     PersonalData personalData;
+
+    @JsonProperty("cedula")
+    String professionalLicense;
+
+    @JsonProperty("turno")
+    String shift;
+
+    String password;
+
+//    PatientEntity patientEntity;
+
 
 }

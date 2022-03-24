@@ -1,21 +1,18 @@
 package com.tuvch.hogarexperto.dto.request;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-
-import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class BinnacleRequest {
 
-    String userId;
+public class BinnacleTypeRequest {
+    @JsonProperty("id_tipoBitacora")
+    int binnaTypeId;
 
-    @JsonProperty("fecha")
-    Date date;
-    @JsonProperty("valor")
-    String value;
-
+    @JsonProperty("descripcion")
+    String description;
 }

@@ -1,8 +1,13 @@
 package com.tuvch.hogarexperto.dto.request;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 import java.util.Date;
-
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class MedicalRecordRequest {
     @JsonProperty("fecha_ingreso")
     Date admissionDate;
@@ -11,7 +16,7 @@ public class MedicalRecordRequest {
     String modality;
 
     @JsonProperty("peso")
-    Float weight;
+    float weight;
 
     @JsonProperty("CURP")
     String CURP;
@@ -31,11 +36,11 @@ public class MedicalRecordRequest {
     @JsonProperty("ant_quirurgicos")
     String surgical;
 
-    @JsonProperty("medicinas")
-    String medicines;
+    @JsonProperty("id_medicinas")
+    int medicines;
 
     @JsonProperty("talla")
-    Float size;
+    float size;
 
 
 }
