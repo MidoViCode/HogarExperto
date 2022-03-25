@@ -11,23 +11,22 @@ import lombok.*;
 @Builder
 @ToString
 
-public class PatientResponse {
-    @JsonProperty("grupo_sanguineo")
-    String blood;
-
-    @JsonProperty("info")
-    String info;
+public class UserResponse {
 
     @JsonProperty("personal_data")
     PersonalData personalData;
 
-    public static PatientResponse buildMock(){
-        return PatientResponse.builder()
-                .blood("O+")
-                .info("observaciones generales ")
+    @JsonProperty("cedula")
+    String professionalLicense;
+
+    @JsonProperty("turno")
+    String shift;
+
+    public static UserResponse buildMock(){
+        return UserResponse.builder()
+                .professionalLicense("201455")
+                .shift("matutino")
                 .personalData(PersonalData.buildMock())
                 .build();
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.tuvch.hogarexperto.dto.request;
+package com.tuvch.hogarexperto.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -9,12 +9,10 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
-public class MedicineRequest {
 
-    @JsonProperty("idMedicamentos")
-    int medicineId;
-
+public class MedicineResponse {
     @JsonProperty("nombre")
     String description;
 
@@ -30,4 +28,13 @@ public class MedicineRequest {
     @JsonProperty("indicacionesUso")
     String indicationsUse;
 
+    public static MedicineResponse buildMock(){
+        return MedicineResponse.builder()
+                .description("Paracetamol")
+                .pharmaceuticalDose("600mg")
+                .routeAdministration("Oral - tabletas")
+                .expiryDate("24/10/1222")
+                .indicationsUse("Tomar una tableta cada 8 horas")
+                .build();
+    }
 }

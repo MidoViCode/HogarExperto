@@ -1,6 +1,9 @@
 package com.tuvch.hogarexperto.controller;
 
+import com.tuvch.hogarexperto.dto.request.PatientRequest;
 import com.tuvch.hogarexperto.dto.request.UserRequest;
+import com.tuvch.hogarexperto.dto.response.StatusResponse;
+import com.tuvch.hogarexperto.dto.response.UserResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,20 +11,21 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @GetMapping("")
-    public String findUsers(@RequestParam("user_type") int userType){
-        return "Busqué el userType: "+userType;
+    public UserResponse findUsers(@RequestParam("user_type") int userType){
+        return UserResponse.buildMock();
 
     }
     @PostMapping("")
-    public String createUser(@RequestBody UserRequest userBody){
-        return "Inseretaré el userType: "+userBody.toString();
+    public StatusResponse createUser(@RequestBody UserRequest userBody){
+        return StatusResponse.buildMock();
 
     }
 
     @DeleteMapping("/{userId}")
-    public String deleteUser(@PathVariable int userId){
-        return "Borrar el userType: "+userId;
+    public StatusResponse deleteUser(@PathVariable int userId){
+        return StatusResponse.buildMock();
 
     }
+
 
 }

@@ -9,8 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class RelativeRequest {
-    String username;
-    String password;
 
     @JsonProperty("num_INE")
     String INE;

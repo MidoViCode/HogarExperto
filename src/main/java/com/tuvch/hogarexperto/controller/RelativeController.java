@@ -1,6 +1,8 @@
 package com.tuvch.hogarexperto.controller;
 
 import com.tuvch.hogarexperto.dto.request.RelativeRequest;
+import com.tuvch.hogarexperto.dto.response.RelativeResponse;
+import com.tuvch.hogarexperto.dto.response.StatusResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,20 +10,19 @@ import org.springframework.web.bind.annotation.*;
 
 public class RelativeController {
     @GetMapping("")
-    public String findRelatives(@RequestParam("relativeId") int relativeId){
-
-        return "Familiar:" + relativeId;
+    public RelativeResponse findRelatives(@RequestParam("relativeId") int relativeId){
+        return RelativeResponse.buildMock();
     }
 
     @PostMapping()
-    public String createRelatives(@RequestBody RelativeRequest relativeBody){
-        return "Insertaré la opción crear" + relativeBody.toString();
+    public StatusResponse createRelatives(@RequestBody RelativeRequest relativeBody){
+        return StatusResponse.buildMock();
     }
 
     @DeleteMapping()
-    public String delete(@PathVariable int relativeId){
+    public StatusResponse deleteRelatives(@PathVariable int relativeId){
 
-        return "Borrar el Familiar  " + relativeId;
+        return StatusResponse.buildMock();
     }
 
 }

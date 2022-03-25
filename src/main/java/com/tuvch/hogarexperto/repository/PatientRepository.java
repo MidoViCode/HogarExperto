@@ -8,6 +8,7 @@ import java.util.Date;
 
 @Repository
 public interface PatientRepository extends CrudRepository <PatientEntity, Integer> {
+    PatientEntity findByPatientId(int patientId);
     PatientEntity findByBirthday(Date birthday);
     PatientEntity findByNameAndLastName (String name, String lastName);
     PatientEntity findByNameAndLastNameAndMiddleName(String name, String lastName, String motherLastName);

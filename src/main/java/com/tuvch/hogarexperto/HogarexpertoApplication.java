@@ -10,4 +10,6 @@ public class HogarexpertoApplication {
 		SpringApplication.run(HogarexpertoApplication.class, args);
 	}
 
+
 }
+

@@ -1,6 +1,8 @@
 package com.tuvch.hogarexperto.controller;
 
 import com.tuvch.hogarexperto.dto.request.BinnacleRequest;
+import com.tuvch.hogarexperto.dto.response.BinnacleResponse;
+import com.tuvch.hogarexperto.dto.response.StatusResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,18 +10,18 @@ import org.springframework.web.bind.annotation.*;
 
 public class BinnacleController {
     @GetMapping()
-    public String findBinnacle(@RequestParam("binnacleId") int binnacledId){
-        return "Busque la bitacora " + binnacledId;
+    public BinnacleResponse findBinnacle(@RequestParam("binnacleId") int binnacleId){
+        return BinnacleResponse.buildMock();
     }
 
     @PostMapping()
-    public String createBinnalce(@RequestBody BinnacleRequest bitacoraBody){
-        return "Insertaré la clave unica del expediente" + bitacoraBody.toString();
+    public StatusResponse createBinnacle(@RequestBody BinnacleRequest bitacoraBody){
+        return StatusResponse.buildMock();
     }
 
-    @DeleteMapping("/{relativeId}")
-    public String delete(@PathVariable int relativeId){
-        return "borrar el familiar"+ relativeId;
+    @DeleteMapping()
+    public StatusResponse deleteBinnacle(@PathVariable int relativeId){
+        return StatusResponse.buildMock();
     }
 
 }

@@ -1,5 +1,8 @@
 package com.tuvch.hogarexperto.controller;
 
+import com.tuvch.hogarexperto.dto.request.MedicalRecordRequest;
+import com.tuvch.hogarexperto.dto.response.MedicalRecordResponse;
+import com.tuvch.hogarexperto.dto.response.StatusResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -7,19 +10,19 @@ import org.springframework.web.bind.annotation.*;
 
 public class MedicalRecordController {
     @GetMapping()
-    public String findMedicalRecord(@RequestParam("medicalRecordId") int medicalRecordId){
-        return "Busque el expdiente" + medicalRecordId;
+    public MedicalRecordResponse findMedicalRecord(@RequestParam("medicalRecordId") int medicalRecordId){
+        return MedicalRecordResponse.buildMock();
     }
 
- //   @PostMapping()
- //   public String createMedicalRecord(@RequestBody medicalRecordRequest expedienteBody){
- //       return "Insertaré expediente" + expedienteBody.toString();
- //   }
+    @PostMapping()
+    public StatusResponse createMedicalRecord(@RequestBody MedicalRecordRequest expedientesBody){
+        return StatusResponse.buildMock();
+    }
 
-    @DeleteMapping("/{medicalRecordId}")
-    public String delete(@PathVariable int medicalRecordId){
+    @DeleteMapping()
+    public StatusResponse deleteMedicalRecord(@PathVariable int medicalRecordId){
 
-        return "borrar el expediente " + medicalRecordId;
+        return StatusResponse.buildMock();
     }
 
 }

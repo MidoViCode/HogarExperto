@@ -2,11 +2,9 @@ package com.tuvch.hogarexperto.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -15,6 +13,11 @@ import java.util.Date;
 @Setter
 public class PatientEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO,generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+
+    @Column(name = "id_paciente")
+    Integer patientId;
     @Column(name = "nombre")
     String name;
 
